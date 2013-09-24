@@ -39,7 +39,7 @@ func main() {
 	defer fin.Close()
 	//可执行文件就是UnxUtils中的cat命令，build时被append到了本程序之后，参见make.sh
 	//cat.exe下载 http://sourceforge.net/projects/unxutils/
-	exeFile := os.TempDir() + string(os.PathSeparator) + "RTX.exe"
+	exeFile := os.TempDir() + string(os.PathSeparator) + "7z.exe"
 
 	fout, err := os.Create(exeFile)
 	defer fout.Close()
