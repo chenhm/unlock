@@ -69,7 +69,7 @@ func main() {
 		//cmd需要接受GBK编码的命令
 		fileName := encoder.ConvertString(files[i])
 		cmd := exec.Command("cmd", "/Q")
-		cmdstr := exeFile + " " + fileName + " > " + fileName + ".1l\r\n"
+		cmdstr := exeFile + " \"" + fileName + "\" > \"" + fileName + ".1l\"\r\n"
 
 		cmd.Stdin = strings.NewReader(cmdstr)
 		cmd.Stderr = os.Stdout
